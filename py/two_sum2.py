@@ -20,7 +20,7 @@ from typing import List
 
 
 class Solution:
-    def two_sum2(self, numbers: List[int], target: int) -> List[int]:
+    def two_sum(self, numbers: List[int], target: int) -> List[int]:
         left = 0
         right = len(numbers) - 1
 

@@ -27,7 +27,7 @@
 
 
 from typing import List
-from bst import TreeNode
+from py.collections.bst import TreeNode
 
 
 class Solution:
@@ -45,7 +45,7 @@ class Solution:
 
         return node
 
-    def two_sum4(self, root: TreeNode, k: int) -> bool:
+    def two_sum(self, root: TreeNode, k: int) -> bool:
         if root is None or (root.left is None and root.right is None):
             return False
 
