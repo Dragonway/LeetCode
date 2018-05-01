@@ -9,6 +9,12 @@ class ListNode:
     def __eq__(self, other: Optional['ListNode']):
         return List(self) == List(other)
 
+    def __str__(self):
+        return str(List(self))
+
+    def __repr__(self):
+        return self.__str__()
+
 
 class List:
     def __init__(self, elements: Optional[Union[ListBase[int], ListNode]] = None):
