@@ -7,6 +7,7 @@
 |  20 | [Valid Parentheses](https://leetcode.com/problems/valid-parentheses) | [Python](./py/valid_parentheses.py) | easy |
 |  21 | [Merge Two Sorted Lists](https://leetcode.com/problems/merge-two-sorted-lists) | [Python](./py/merge_two_sorted_lists.py) | easy |
 |  26 | [Remove Duplicates from Sorted Array](https://leetcode.com/problems/remove-duplicates-from-sorted-array) | [Python](./py/remove_duplicates_from_sorted_array.py) | easy |
+|  27 | [Remove Element](https://leetcode.com/problems/remove-element) | [Python](./py/remove_element.py) | easy |
 |  88 | [Merge Sorted Array](https://leetcode.com/problems/merge-sorted-array) | [Python](./py/merge_two_sorted_arrays.py) | easy |
 | 167 | [Two Sum II - Input array is sorted](https://leetcode.com/problems/two-sum-ii-input-array-is-sorted/) | [Python](./py/two_sum2.py) | easy |
 | 561 | [Array Partition I](https://leetcode.com/problems/array-partition-i) | [Python](./py/array_partition1.py) | easy |
