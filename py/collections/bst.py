@@ -9,9 +9,12 @@ class TreeNode:
 
 
 class BinarySearchTree:
-    def __init__(self, elements: Optional[List[int]]):
+    def __init__(self, elements: Optional[List[int]] = None):
         self.root: Optional[TreeNode] = None
         self.size = 0
+
+        if elements is None:
+            return
 
         for elem in elements:
             self.add(elem)
