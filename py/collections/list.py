@@ -6,6 +6,9 @@ class ListNode:
         self.val: int = x
         self.next: Optional[ListNode] = None
 
+    def __eq__(self, other: Optional['ListNode']):
+        return List(self) == List(other)
+
 
 class List:
     def __init__(self, elements: Optional[Union[ListBase[int], ListNode]] = None):
