@@ -1,7 +1,9 @@
 import unittest
 from py.tests.utils import test
+from py.collections.list import List
 from py import remove_duplicates_from_sorted_array as rdfsa
 from py import remove_element as re
+from py import remove_linked_list_elements as rlle
 
 
 # TODO: Need some utils for testing in-place solutions
@@ -24,3 +26,13 @@ class TestRemoveElements(unittest.TestCase):
         test([1],                       0,  result=[1])
         test([0],                       0,  result=[])
         test([],                        0,  result=[])
+
+    @test(rlle.Solution.remove_elements)
+    def test_remove_linked_list_elements(self) -> None:
+        test(List([1, 2, 6, 3, 4, 5, 6]).root,  6,  result=List([1, 2, 3, 4, 5]).root)
+        test(List([1, 1, 0, 3, 0]).root,        1,  result=List([0, 3, 0]).root)
+        test(List([1, 1]).root,                 1,  result=List([]).root)
+        test(List([3, 4]).root,                 1,  result=List([3, 4]).root)
+        test(List([1]).root,                    1,  result=List([]).root)
+        test(List([0]).root,                    1,  result=List([0]).root)
+        test(List([]).root,                     1,  result=List([]).root)
