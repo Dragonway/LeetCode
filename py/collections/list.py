@@ -36,6 +36,19 @@ class List:
 
         return lhs is rhs
 
+    def __str__(self):
+        if self.root is None:
+            return '[]'
+
+        result = '['
+        node = self.root
+        while node.next is not None:
+            result += '%s, ' % node.val
+            node = node.next
+
+        result += '%s]' % node.val
+        return result
+
     def add(self, element: int) -> None:
         if self.root is None:
             self.root = ListNode(element)
