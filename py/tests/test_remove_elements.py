@@ -4,6 +4,7 @@ from py import remove_duplicates_from_sorted_array as rdfsa
 from py import remove_element as re
 
 
+# TODO: Need some utils for testing in-place solutions
 class TestRemoveElements(unittest.TestCase):
 
     @test(rdfsa.Solution.remove_duplicates)
