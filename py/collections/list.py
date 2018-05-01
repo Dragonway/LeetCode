@@ -17,6 +17,19 @@ class List:
         for elem in elements:
             self.add(elem)
 
+    def __eq__(self, other: 'List'):
+        lhs = self.root
+        rhs = other.root
+
+        while lhs is not None and rhs is not None:
+            if lhs.val != rhs.val:
+                return False
+
+            lhs = lhs.next
+            rhs = rhs.next
+
+        return lhs is rhs
+
     def add(self, element: int) -> None:
         if self.root is None:
             self.root = ListNode(element)
