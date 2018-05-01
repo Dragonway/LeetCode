@@ -6,11 +6,12 @@
 # Output: 1->1->2->3->4->4
 
 
+from typing import Optional
 from py.collections.list import ListNode
 
 
 class Solution:
-    def merge_two_lists(self, l1: ListNode, l2: ListNode) -> ListNode:
+    def merge_two_lists(self, l1: Optional[ListNode], l2: Optional[ListNode]) -> Optional[ListNode]:
         if l1 is None:
             return l2
 

@@ -26,7 +26,7 @@
 # Output: False
 
 
-from typing import List
+from typing import List, Optional
 from py.collections.bst import TreeNode
 
 
@@ -45,7 +45,7 @@ class Solution:
 
         return node
 
-    def two_sum(self, root: TreeNode, k: int) -> bool:
+    def two_sum(self, root: Optional[TreeNode], k: int) -> bool:
         if root is None or (root.left is None and root.right is None):
             return False
 
