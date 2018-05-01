@@ -1,20 +1,30 @@
-def solution(module):
-    def test_solution(func):
-        def wrapper(*args, **kwargs):
-            _globals = func.__globals__
+import inspect
+
+
+def test(func):
+    def test_decorator(test_func):
+        def wrapper(self, *args, **kwargs):
+            solution_class = getattr(inspect.getmodule(func), func.__qualname__.rsplit('.', 1)[0])
+            solution = solution_class()
+
+            def _test(*params, result):
+                with self.subTest(params=params, result=result):
+                    self.assertEqual(func(solution, *params), result)
+
+            _globals = test_func.__globals__
             sentinel = object
 
-            oldvalue = _globals.get('solution', sentinel)
-            _globals['solution'] = module.Solution()
+            oldvalue = _globals.get('test', sentinel)
+            _globals['test'] = _test
 
             try:
-                result = func(*args, **kwargs)
+                result = test_func(self, *args, **kwargs)
             finally:
                 if oldvalue is sentinel:
-                    del _globals['solution']
+                    del _globals['test']
                 else:
-                    _globals['solution'] = oldvalue
+                    _globals['test'] = oldvalue
 
             return result
         return wrapper
-    return test_solution
+    return test_decorator
