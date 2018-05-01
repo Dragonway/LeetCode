@@ -49,6 +49,9 @@ class List:
         result += '%s]' % node.val
         return result
 
+    def __repr__(self):
+        return self.__str__()
+
     def add(self, element: int) -> None:
         if self.root is None:
             self.root = ListNode(element)
