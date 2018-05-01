@@ -1,4 +1,4 @@
-from typing import List as ListBase, Optional
+from typing import List as ListBase, Optional, Union
 
 
 class ListNode:
@@ -8,14 +8,17 @@ class ListNode:
 
 
 class List:
-    def __init__(self, elements: Optional[ListBase[int]] = None):
+    def __init__(self, elements: Optional[Union[ListBase[int], ListNode]] = None):
         self.root: Optional[ListNode] = None
 
         if elements is None:
             return
 
-        for elem in elements:
-            self.add(elem)
+        if isinstance(elements, ListNode):
+            self.root = elements
+        else:
+            for elem in elements:
+                self.add(elem)
 
     def __eq__(self, other: 'List'):
         lhs = self.root
