@@ -25,3 +25,13 @@ class TestSum(unittest.TestCase):
         test(List([1, 1, 1]).root,  List([9, 8, 8, 9]).root,    result=List([0, 0, 0, 0, 1]).root)
         test(List([5]).root,        List([6]).root,             result=List([1, 1]).root)
         test(List([0]).root,        List([0]).root,             result=List([0]).root)
+
+    @test(add2nums2.Solution.add_two_numbers)
+    def test_add_two_numbers2(self) -> None:
+        test(List([2, 4, 3]).root,  List([5, 6, 4]).root,       result=List([8, 0, 7]).root)
+        test(List([2, 4, 3]).root,  List([0]).root,             result=List([2, 4, 3]).root)
+        test(List([0]).root,        List([5, 6, 4]).root,       result=List([5, 6, 4]).root)
+        test(List([1, 1, 1]).root,  List([2, 3]).root,          result=List([1, 3, 4]).root)
+        test(List([1, 1, 1]).root,  List([9, 8, 8, 9]).root,    result=List([1, 0, 0, 0, 0]).root)
+        test(List([5]).root,        List([6]).root,             result=List([1, 1]).root)
+        test(List([0]).root,        List([0]).root,             result=List([0]).root)
