@@ -16,3 +16,4 @@
 | 448 | [Find All Numbers Disappeared in an Array](https://leetcode.com/problems/find-all-numbers-disappeared-in-an-array) | [Python](./py/find_disappeared_numbers.py) | easy |
 | 561 | [Array Partition I](https://leetcode.com/problems/array-partition-i) | [Python](./py/array_partition1.py) | easy |
 | 653 | [Two Sum IV - Input is a BST](https://leetcode.com/problems/two-sum-iv-input-is-a-bst) | [Python](./py/two_sum4.py) | easy |
+| 695 | [Max Area of Island](https://leetcode.com/problems/max-area-of-island) | [Python](./py/max_area_of_island.py) | easy |
