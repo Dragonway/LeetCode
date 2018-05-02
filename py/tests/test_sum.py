@@ -3,6 +3,7 @@ from py.tests.utils import test
 from py.collections.list import List
 from py import array_partition1 as ap1
 from py import add_two_numbers as add2nums
+from py import add_two_numbers2 as add2nums2
 
 
 class TestSum(unittest.TestCase):
@@ -23,3 +24,4 @@ class TestSum(unittest.TestCase):
         test(List([1, 1, 1]).root,  List([2, 3]).root,          result=List([3, 4, 1]).root)
         test(List([1, 1, 1]).root,  List([9, 8, 8, 9]).root,    result=List([0, 0, 0, 0, 1]).root)
         test(List([5]).root,        List([6]).root,             result=List([1, 1]).root)
+        test(List([0]).root,        List([0]).root,             result=List([0]).root)
