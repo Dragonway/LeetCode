@@ -3,6 +3,7 @@ from py.tests.utils import test
 from py.collections.list import List
 from py import merge_two_sorted_lists as merge2list
 from py import merge_two_sorted_arrays as merge2array
+from py import summary_ranges as sr
 
 
 class TestMergeSorted(unittest.TestCase):
@@ -30,3 +31,14 @@ class TestMergeSorted(unittest.TestCase):
         test([1, 2, 3],             3,  [],             0,  result=[1, 2, 3])
         test([0, 0, 0],             0,  [1, 2, 3],      3,  result=[1, 2, 3])
         test([],                    0,  [],             0,  result=[])
+
+    @test(sr.Solution.summary_ranges)
+    def test_summary_ranges(self) -> None:
+        test([0, 1, 2, 4, 5, 7],    result=['0->2', '4->5', '7'])
+        test([0, 2, 3, 4, 6, 8, 9], result=['0', '2->4', '6', '8->9'])
+        test([-3, -2, 0, 1, 2],     result=['-3->-2', '0->2'])
+        test([-2, -1, 0, 4, 6],     result=['-2->0', '4', '6'])
+        test([-1, 0, 1, 2, 4],      result=['-1->2', '4'])
+        test([0, 1, 2, 3, 4, 5],    result=['0->5'])
+        test([1],                   result=['1'])
+        test([],                    result=[])
