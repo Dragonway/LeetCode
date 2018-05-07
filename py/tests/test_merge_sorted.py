@@ -2,6 +2,7 @@ import unittest
 from py.tests.utils import test
 from py.collections.list import List
 from py import merge_two_sorted_lists as merge2list
+from py import merge_k_sorted_lists as mergeKlist
 from py import merge_two_sorted_arrays as merge2array
 from py import summary_ranges as sr
 
@@ -19,6 +20,15 @@ class TestMergeSorted(unittest.TestCase):
         test(List([1, 2, 3]).root,  List([]).root,              result=List([1, 2, 3]).root)
         test(List([]).root,         List([1, 2, 3]).root,       result=List([1, 2, 3]).root)
         test(List([]).root,         List([]).root,              result=List([]).root)
+
+    @test(mergeKlist.Solution.merge_k_lists)
+    def test_merge_k_sorted_lists(self) -> None:
+        test([List([1, 4, 5]).root, List([1, 3, 4]).root,   List([2, 6]).root],         result=List([1, 1, 2, 3, 4, 4, 5, 6]).root)
+        test([List([]).root,        List([-1, 0, 1]).root,  List([8, 10, 154]).root],   result=List([-1, 0, 1, 8, 10, 154]).root)
+        test([List([1, 1, 1]).root, List([1, 1, 1]).root,   List([1]).root],            result=List([1, 1, 1, 1, 1, 1, 1]).root)
+        test([List([0]).root,       List([-3]).root,        List([5]).root],            result=List([-3, 0, 5]).root)
+        test([List([]).root,        List([]).root,          List([8, 9, 11]).root],     result=List([8, 9, 11]).root)
+        test([List([]).root,        List([]).root,          List([]).root],             result=List([]).root)
 
     @test(merge2array.Solution.merge)
     def test_merge_two_sorted_arrays(self) -> None:
