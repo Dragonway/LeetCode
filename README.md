@@ -8,6 +8,7 @@
 |  14 | [Longest Common Prefix](https://leetcode.com/problems/longest-common-prefix) | [Python](./py/longest_common_prefix.py) | easy |
 |  20 | [Valid Parentheses](https://leetcode.com/problems/valid-parentheses) | [Python](./py/valid_parentheses.py) | easy |
 |  21 | [Merge Two Sorted Lists](https://leetcode.com/problems/merge-two-sorted-lists) | [Python](./py/merge_two_sorted_lists.py) | easy |
+|  23 | [Merge k Sorted Lists](https://leetcode.com/problems/merge-k-sorted-lists) | [Python](./py/merge_k_sorted_lists.py) | hard |
 |  26 | [Remove Duplicates from Sorted Array](https://leetcode.com/problems/remove-duplicates-from-sorted-array) | [Python](./py/remove_duplicates_from_sorted_array.py) | easy |
 |  27 | [Remove Element](https://leetcode.com/problems/remove-element) | [Python](./py/remove_element.py) | easy |
 |  28 | [Implement strStr()](https://leetcode.com/problems/implement-strstr) | [Python](./py/implement_strstr.py) | easy |
