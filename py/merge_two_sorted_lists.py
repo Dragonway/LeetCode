@@ -35,5 +35,5 @@ class Solution:
                 l2 = l2.next
             cur = cur.next
 
-        cur.next = l1 if l1 is not None else l2
+        cur.next = l1 or l2
         return l0

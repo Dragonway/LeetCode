@@ -40,7 +40,7 @@ class Solution:
             prev = ListNode(x)
             prev.next = result
 
-        stack1 = stack2 if stack2 else stack1
+        stack1 = stack2 or stack1
 
         while stack1:
             result = prev
