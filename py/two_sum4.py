@@ -32,21 +32,21 @@ from py.collections.bst import TreeNode
 
 class Solution:
     def left_leaf(self, node: TreeNode, stack: List[TreeNode]) -> TreeNode:
-        while node.left is not None:
+        while node.left:
             stack.append(node)
             node = node.left
 
         return node
 
     def right_leaf(self, node: TreeNode, stack: List[TreeNode]) -> TreeNode:
-        while node.right is not None:
+        while node.right:
             stack.append(node)
             node = node.right
 
         return node
 
     def two_sum(self, root: Optional[TreeNode], k: int) -> bool:
-        if root is None or (root.left is None and root.right is None):
+        if not root or (not root.left and not root.right):
             return False
 
         left_stack = []
@@ -61,12 +61,12 @@ class Solution:
             if sum == k:
                 return True
             elif sum < k:
-                if left.right is not None:
+                if left.right:
                     left = self.left_leaf(left.right, left_stack)
                 else:
                     left = left_stack.pop()
             else:
-                if right.left is not None:
+                if right.left:
                     right = self.right_leaf(right.left, right_stack)
                 else:
                     right = right_stack.pop()

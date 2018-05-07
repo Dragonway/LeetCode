@@ -13,11 +13,11 @@ from py.collections.list import ListNode
 class Solution:
     def remove_elements(self, head: Optional[ListNode], val: int) -> Optional[ListNode]:
         new_head = node = None
-        while head is not None:
+        while head:
             _next = head.next
 
             if head.val != val:
-                if node is None:
+                if not node:
                     node = head
                     node.next = None
                     new_head = node
