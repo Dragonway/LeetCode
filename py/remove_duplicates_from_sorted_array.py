@@ -29,10 +29,9 @@ from typing import List
 
 
 class Solution:
-    def remove_duplicates(self, nums: List[int]) -> List[int]:
+    def remove_duplicates(self, nums: List[int]) -> int:
         if not nums:
-            # return 0
-            return nums  # for test
+            return 0
 
         new_size = 1
         for i in range(1, len(nums)):
@@ -40,5 +39,4 @@ class Solution:
                 nums[new_size] = nums[i]
                 new_size += 1
 
-        # return new_size
-        return nums[:new_size]  # for test
+        return new_size

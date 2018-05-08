@@ -30,7 +30,7 @@ from typing import List
 
 
 class Solution:
-    def remove_element(self, nums: List[int], val: int) -> List[int]:
+    def remove_element(self, nums: List[int], val: int) -> int:
         i = 0
         size = len(nums)
         while i < size:
@@ -40,5 +40,4 @@ class Solution:
             else:
                 i += 1
 
-        # return size
-        return nums[:size]  # for test
+        return size

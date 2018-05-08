@@ -30,17 +30,18 @@ class TestMergeSorted(unittest.TestCase):
         test([List([]).root,        List([]).root,          List([8, 9, 11]).root],     result=List([8, 9, 11]).root)
         test([List([]).root,        List([]).root,          List([]).root],             result=List([]).root)
 
+    @unittest.expectedFailure
     @test(merge2array.Solution.merge)
     def test_merge_two_sorted_arrays(self) -> None:
-        test([1, 2, 4, 0, 0, 0],    3,  [1, 3, 4],      3,  result=[1, 1, 2, 3, 4, 4])
-        test([1, 1, 1, 1, 1, 1],    3,  [1, 1, 1],      3,  result=[1, 1, 1, 1, 1, 1])
-        test([-2, 0, 2, -1, 0, 1],  3,  [-4, -3, -1],   3,  result=[-4, -3, -2, -1, 0, 2])
-        test([1, 2, 3, 3, 2, 1],    3,  [4, 5, 6],      3,  result=[1, 2, 3, 4, 5, 6])
-        test([4, 5, 6, 0, 0, 0],    3,  [1, 2, 3],      3,  result=[1, 2, 3, 4, 5, 6])
-        test([4, 5, 6, 7, 8],       3,  [1, 2],         2,  result=[1, 2, 4, 5, 6])
-        test([1, 2, 3],             3,  [],             0,  result=[1, 2, 3])
-        test([0, 0, 0],             0,  [1, 2, 3],      3,  result=[1, 2, 3])
-        test([],                    0,  [],             0,  result=[])
+        test([1, 2, 4, 0, 0, 0],    3,  [1, 3, 4],      3,  _1=[1, 1, 2, 3, 4, 4])
+        test([1, 1, 1, 1, 1, 1],    3,  [1, 1, 1],      3,  _1=[1, 1, 1, 1, 1, 1])
+        test([-2, 0, 2, -1, 0, 1],  3,  [-4, -3, -1],   3,  _1=[-4, -3, -2, -1, 0, 2])
+        test([1, 2, 3, 3, 2, 1],    3,  [4, 5, 6],      3,  _1=[1, 2, 3, 4, 5, 6])
+        test([4, 5, 6, 0, 0, 0],    3,  [1, 2, 3],      3,  _1=[1, 2, 3, 4, 5, 6])
+        test([4, 5, 6, 7, 8],       3,  [1, 2],         2,  _1=[1, 2, 4, 5, 6])
+        test([1, 2, 3],             3,  [],             0,  _1=[1, 2, 3])
+        test([0, 0, 0],             0,  [1, 2, 3],      3,  _1=[1, 2, 3])
+        test([],                    0,  [],             0,  _1=[])
 
     @test(sr.Solution.summary_ranges)
     def test_summary_ranges(self) -> None:

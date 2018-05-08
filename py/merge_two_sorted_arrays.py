@@ -19,7 +19,7 @@ from typing import List
 
 
 class Solution:
-    def merge(self, nums1: List[int], m: int, nums2: List[int], n: int) -> List[int]:
+    def merge(self, nums1: List[int], m: int, nums2: List[int], n: int) -> None:
         nums0 = nums1
         nums1 = nums0[:m]
 
@@ -38,5 +38,3 @@ class Solution:
             else:
                 nums0[k] = nums2[j]
                 j += 1
-
-        return nums0  # for test

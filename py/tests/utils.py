@@ -7,9 +7,18 @@ def test(func):
             solution_class = getattr(inspect.getmodule(func), func.__qualname__.rsplit('.', 1)[0])
             solution = solution_class()
 
-            def _test(*params, result):
-                with self.subTest(params=params, result=result):
+            def _test(*params, result=None, **states):
+                with self.subTest(params=params, result=result, states=states):
                     self.assertEqual(func(solution, *params), result)
+
+                    for key, state in states.items():
+                        if key[0] == '_':
+                            try:
+                                idx = int(key[1:])
+                            except ValueError:
+                                continue
+
+                            self.assertEqual(params[idx-1], state)
 
             _globals = test_func.__globals__
             sentinel = object
