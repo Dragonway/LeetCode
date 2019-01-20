@@ -37,3 +37,5 @@ def test(func):
             return result
         return wrapper
     return test_decorator
+
+# TODO: Need some util to set func for wrapping params/result/state: e.g. non-order sensitive result comparing

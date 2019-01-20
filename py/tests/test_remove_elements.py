@@ -6,7 +6,6 @@ from py import remove_element as re
 from py import remove_linked_list_elements as rlle
 
 
-# TODO: Need some util to set func for wrapping params/result/state
 class TestRemoveElements(unittest.TestCase):
 
     @unittest.expectedFailure
