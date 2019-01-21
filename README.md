@@ -14,6 +14,7 @@
 |  28 | [Implement strStr()](https://leetcode.com/problems/implement-strstr) | [Python](./py/implement_strstr.py) | easy |
 |  35 | [Search Insert Position](https://leetcode.com/problems/search-insert-position) | [Python](./py/search_insert_position.py) | easy |
 |  46 | [Permutations](https://leetcode.com/problems/permutations/) | [Python](./py/permutations.py) | medium |
+|  47 | [Permutations II](https://leetcode.com/problems/permutations-ii/) | [Python](./py/permutations2.py) | medium |
 |  88 | [Merge Sorted Array](https://leetcode.com/problems/merge-sorted-array) | [Python](./py/merge_two_sorted_arrays.py) | easy |
 | 167 | [Two Sum II - Input array is sorted](https://leetcode.com/problems/two-sum-ii-input-array-is-sorted/) | [Python](./py/two_sum2.py) | easy |
 | 203 | [Remove Linked List Elements](https://leetcode.com/problems/remove-linked-list-elements) | [Python](./py/remove_linked_list_elements.py) | easy |
