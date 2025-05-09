@@ -8,7 +8,6 @@ from py import remove_linked_list_elements as rlle
 
 class TestRemoveElements(unittest.TestCase):
 
-    @unittest.expectedFailure
     @test(rdfsa.Solution.remove_duplicates)
     def test_remove_duplicates_from_sorted_array(self) -> None:
         test([1, 1, 2],             result=2,   _1=[1, 2])
@@ -17,7 +16,6 @@ class TestRemoveElements(unittest.TestCase):
         test([0],                   result=1,   _1=[0])
         test([],                    result=0,   _1=[])
 
-    @unittest.expectedFailure
     @test(re.Solution.remove_element)
     def test_remove_element(self) -> None:
         test([3, 2, 2, 3],              3,  result=2,   _1=[2, 2])

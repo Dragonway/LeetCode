@@ -18,7 +18,7 @@ def test(func):
                             except ValueError:
                                 continue
 
-                            self.assertEqual(params[idx-1], state)
+                            self.assertEqual(params[idx-1][:result], state)
 
             _globals = test_func.__globals__
             sentinel = object

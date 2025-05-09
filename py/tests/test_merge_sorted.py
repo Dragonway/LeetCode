@@ -30,7 +30,6 @@ class TestMergeSorted(unittest.TestCase):
         test([List([]).root,        List([]).root,          List([8, 9, 11]).root],     result=List([8, 9, 11]).root)
         test([List([]).root,        List([]).root,          List([]).root],             result=List([]).root)
 
-    @unittest.expectedFailure
     @test(merge2array.Solution.merge)
     def test_merge_two_sorted_arrays(self) -> None:
         test([1, 2, 4, 0, 0, 0],    3,  [1, 3, 4],      3,  _1=[1, 1, 2, 3, 4, 4])
