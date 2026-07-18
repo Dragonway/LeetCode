@@ -2,7 +2,7 @@
 
 |  №  |     Title     |    Solution    | Difficulty |
 |-----|---------------|----------------|------------|
-|  1  | [Two Sum](https://leetcode.com/problems/two-sum/) | [Python](./py/two_sum1.py) | easy |
+|  1  | [Two Sum](https://leetcode.com/problems/two-sum/) | [C++](./cpp/solutions/two_sum1.hpp), [Python](./py/two_sum1.py) | easy |
 |  2  | [Add Two Numbers](https://leetcode.com/problems/add-two-numbers) | [Python](./py/add_two_numbers.py) | medium |
 |  3  | [Longest Substring Without Repeating Characters](https://leetcode.com/problems/longest-substring-without-repeating-characters) | [Python](./py/longest_substr_without_repeats.py) | medium |
 |  14 | [Longest Common Prefix](https://leetcode.com/problems/longest-common-prefix) | [Python](./py/longest_common_prefix.py) | easy |
