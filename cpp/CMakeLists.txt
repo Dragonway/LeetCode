@@ -4,6 +4,14 @@ project(leetcode CXX)
 set(CMAKE_CXX_STANDARD 20)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
+set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
+
+option(ENABLE_CLANG_TIDY "Run clang-tidy as part of the build" OFF)
+if(ENABLE_CLANG_TIDY)
+    find_program(CLANG_TIDY_EXE clang-tidy REQUIRED)
+    message(STATUS "clang-tidy enabled: ${CLANG_TIDY_EXE}")
+endif()
+
 include(FetchContent)
 FetchContent_Declare(
     Catch2
@@ -35,4 +43,9 @@ foreach(test_src ${TEST_SOURCES})
     endif()
 
     add_test(NAME ${problem_name} COMMAND ${problem_name})
+
+
+    if(ENABLE_CLANG_TIDY)
+        set_target_properties(${problem_name} PROPERTIES CXX_CLANG_TIDY "${CLANG_TIDY_EXE}")
+    endif()
 endforeach()

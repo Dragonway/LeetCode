@@ -1,0 +1,31 @@
+---
+Checks: >
+  -*,
+  bugprone-*,
+  clang-analyzer-*,
+  performance-*,
+  modernize-*,
+  readability-*,
+  cppcoreguidelines-*,
+  -modernize-use-trailing-return-type,
+  -readability-identifier-length,
+  -readability-magic-numbers,
+  -cppcoreguidelines-avoid-magic-numbers,
+  -readability-braces-around-statements,
+  -cppcoreguidelines-pro-bounds-array-to-pointer-decay,
+  -cppcoreguidelines-avoid-do-while,
+  -readability-convert-member-functions-to-static
+
+# 'avoid-do-while' is turned because it is being triggered by using REQUIRE/CHECK macroses of Catch2;
+# 'convert-member-functions-to-static' conflicts with the leet code's solution class interface (it must have non-static member functions)
+
+WarningsAsErrors: ''
+
+# check only 'solutions' and 'tests' otherwise it starts to check Catch2 soruce files
+HeaderFilterRegex: '.*(solutions|tests).*'
+
+FormatStyle: none
+
+CheckOptions:
+  - key: readability-function-cognitive-complexity.Threshold
+    value: '120'
